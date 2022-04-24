@@ -127,6 +127,12 @@ window.addEventListener("load", () => {
   });
 });
 
+// Scroll 0
+
+const toTheTop = () => {
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+};
+
 // Cambio banda principal
 
 contenedorDeImagenes.addEventListener("click", (e) => {
@@ -137,6 +143,7 @@ contenedorDeImagenes.addEventListener("click", (e) => {
       parrafoPrincipal.innerHTML = "";
       contenedorGifs.innerHTML = "";
       cambioBandaPrincipal(i);
+      toTheTop()
     }
   });
 });
